@@ -2,100 +2,240 @@
 <html>
   <head>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.js" />
     <title>MahdiFlix</title>
   </head>
   <body>
+    <h1 class="titl2">MahdiFlix</h1>
     <section class="header">
       <div class="navbar">
-        <h3 style="color: crimson">MahdiFlix</h3>
-        <a class="as" style="text-decoration: none" href="#">Home </a>
-        <a class="as" style="text-decoration: none" href="#Animes">Animes</a>
-        <a class="as" style="text-decoration: none" href="#">Films</a>
-        <a class="as" style="text-decoration: none" href="#">What's new</a>
-        <img class="search" src="search-logo.png" alt="" style="width: 30px" />
-        <h3>Kids</h3>
-        <img
-          class="notif"
-          src="notification-logo.png"
-          alt=""
-          style="width: 30px"
-          ;
-        />
+        <div class="navbar1">
+          <a class="as" style="text-decoration: none" href="#">Home </a>
+          <a class="as" style="text-decoration: none" href="#animes">Animes</a>
+          <h1 class="titl">MahdiFlix</h1>
+          <a class="as" style="text-decoration: none" href="#">Films</a>
+          <a class="as" style="text-decoration: none" href="#">What's new</a>
+        </div>
+        <div class="bat">
+          <h3>Favourites</h3>
+          <img class="ba" src="HEARTTT.png" alt="heart" />
+        </div>
       </div>
-      <video class="backgroundHeader"   autoplay muted>
-        <source src="https://res.cloudinary.com/dxjhao6qa/video/upload/v1702200194/jcetnswxbcjcvtfg70c4.mp4" type="video/mp4">
-      Your browser does not support the video tag.
+      <button class="Volume"><ion-icon name="volume-mute"></ion-icon></button>
+      <video class="backgroundHeader" id="video-ad" autoplay muted>
+        <source
+          src="https://res.cloudinary.com/dxjhao6qa/video/upload/v1702200194/jcetnswxbcjcvtfg70c4.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
       </video>
-    </section>
-    
-    <section class="Animes">Animes
-    <h1 class="anime">Animes</h1>
-    <div class="cards">
-      <div class="card">
-          <img src="THE-ONE-PIECE-IS-REAAAAL.jpe"alt="One piece"/>
-          <p style="color: whitesmoke">
+      <button id="unmuteButton" onclick="toggleMute()">Unmute</button>
+    </section>  
+
+    <section class="Animes">
+      animes
+      <h1 class="anime">Animes</h1>
+      <div class="cards">
+        <div class="card">
+          <div class="head">
+            <h3 class="huh">ONE PIECE</h3>
+            <button>
+              <ion-icon
+                style="font-size: 20px; color: white"
+                name="bookmark-outline"
+              ></ion-icon>
+            </button>
+          </div>
+          <video autoplay muted>
+            <source
+              src="https://res.cloudinary.com/dxjhao6qa/video/upload/v1702753440/animes/irdcdjim3lrogzqjrw68.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+          <p class="yoo" style="color: whitesmoke">
             A brave kid dreams to be The king of the pirates showing us his
             adventures<br />across the 7 seas while travelling with his friends
             and coming in with many<br />Obstacles
           </p>
-          <button style="width: 100%;">Watch Now</button>
-      </div>
-      <div class="card">
-          <img src="my hero.jpg" alt="my hero"  />
-          <p style="color: whitesmoke">
+        </div>
+        <div class="card">
+          <div class="head">
+            <h3 class="huh">MY HERO ACADIMIA</h3>
+            <button>
+              <ion-icon
+                style="font-size: 20px; color: white"
+                name="bookmark-outline"
+              ></ion-icon>
+            </button>
+          </div>
+          <video autoplay muted>
+            <source
+              src="https://res.cloudinary.com/dxjhao6qa/video/upload/v1702754151/animes/qvr0rvczvzjr0rrnwjvq.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+          <p class="yoo" style="color: whitesmoke">
             Set in a world where superpowers (called "Quirks") have become
             commonplace,<br />
             the story follows Izuku Midoriya, a boy who was born without a<br />
             Quirk but still dreams of becoming a superhero himself.
           </p>
-        <button style="width: 100%;">Watch Now</button>
-      </div>
-      <div class="card">
-          <img src="naruto.jpg" alt="NARUTO!SASUKEEE!"  />   
-          <p style="color: whitesmoke">
+        </div>
+        <div class="card">
+          <div class="head">
+            <h3 class="huh">NARUTO SHIPPUDEN</h3>
+            <button >
+              <ion-icon
+                style="font-size: 20px; color: white"
+                name="bookmarks"
+              ></ion-icon>
+            </button>
+          </div>
+          <video autoplay muted>
+            <source
+              src="https://res.cloudinary.com/dxjhao6qa/video/upload/v1702754796/animes/wngvstqlohoqdvzrrrdl.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+          <p class="yoo" style="color: whitesmoke">
             Naruto Uzumaki, a mischievous adolescent ninja, struggles as he
             searches<br />
             for recognition and dreams of becoming the Hokage<br />, the
             village's leader and strongest ninja.
           </p>
-        <button style="width: 100%;">Watch Now</button>
-      </div>
-      <div class="card">
-          <img src="vinland-saga.jpe" alt="" />       
-          <p style="color: whitesmoke">
+        </div>
+        <div class="card">
+          <div class="head">
+            <h3 class="huh">VINLAND SAGA</h3>
+            <button>
+              <ion-icon
+                style="font-size: 20px; color: white"
+                name="bookmark-outline"
+              ></ion-icon>
+            </button>
+          </div>
+          <video autoplay muted>
+            <source
+              src="https://res.cloudinary.com/dxjhao6qa/video/upload/v1702755096/animes/tensnfhxlnkpyitkzuc6.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+          <p class="yoo" style="color: whitesmoke">
             Vinland, the land of wild grapes in North America that was
             <br />visited and named by Leif Eriksson about the year 1000 ce<br />.
             Its exact location is not known, but it was probably<br />
             the area surrounding the Gulf of Saint Lawrence in what is now
             eastern Canada.
           </p>
-        <button style="width: 100%;">Watch Now</button>
-      </div>
-      <div class="card">
-          <img src="dragonball.webp" alt=""  />
-          <p style="color: whitesmoke">
+        </div>
+        <div class="card">
+          <div class="head">
+            <h3 class="huh">DRAGON BALL</h3>
+            <button>
+              <ion-icon
+                style="font-size: 20px; color: white"
+                name="bookmark-outline"
+              ></ion-icon>
+            </button>
+          </div>
+          <video autoplay muted>
+            <source
+              src="https://res.cloudinary.com/dxjhao6qa/video/upload/v1702755355/animes/lcucqaz4yotoaltugpaa.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+          <p class="yoo" style="color: whitesmoke">
             Dragon Ball tells the tale of a young warrior by the name of Son
             Goku, <br />a young peculiar boy with a tail who embarks on a quest
             to become stronger and learns<br />
             of the Dragon Balls, when, once all 7 are gathered, grant any wish
             of choice.
           </p>
-        
-        <button style="width: 100%;">Watch Now</button>
-      </div>
-      <div class="card">
-          <img src="baki.jpg" alt=""  /> 
-          <p style="color: whitesmoke">
+        </div>
+        <div class="card">
+          <div class="head">
+            <h3 class="huh">BAKI HANMA</h3>
+            <button>
+              <ion-icon
+                style="font-size: 20px; color: white"
+                name="bookmark-outline"
+              ></ion-icon>
+            </button>
+          </div>
+          <video autoplay muted>
+            <source
+              src="https://res.cloudinary.com/dxjhao6qa/video/upload/v1702755942/animes/wwdmfecwtsgkno44z3vy.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+          <p class="yoo" style="color: whitesmoke">
             Baki is usually a carefree, laid-back, hard-training, and sometimes
             an aggressive<br />
             teenage boy throughout most of the series. Baki strives to defeat
             his father<br />, Yuujirou Hanma, who is indisputably considered the
             strongest man alive.
           </p>
-        <button style="width: 100%;">Watch Now</button>
+        </div>
       </div>
-    </div>
     </section>
-    <section>Films</section>
+    <div class="footer">
+      <img class="logos" src="facebook.jpg" alt="facebook" />
+      <img class="logos" src="instagram.jpg" alt="insta" />
+      <img class="logos" src="twitter.png" alt="twitter" />
+      <img class="logos" src="youtube.jpg" alt="youtube" />
+    </div>
+    <div class="partie">
+      <div class="partie1">
+        <a href="#">Audiodescription</a>
+        <a href="#">Centre d'aide</a>
+        <a href="#">Cartes cadeaux</a>
+        <a href="#">Presse</a>
+      </div>
+      <div class="partie2">
+        <a href="#">Relations investors</a>
+        <a href="#">Recrutement</a>
+        <a href="#">Condition d'utilisation</a>
+        <a href="#">Confidentialité</a>
+      </div>
+      <div class="partie3">
+        <a href="#">Informations légales</a>
+        <a href="#">Préférences de cookies</a>
+        <a href="#">Mention légales</a>
+        <a href="#">Nous contacter</a>
+      </div>
+      <br />
+      <button class="buton">Code de service</button>
+    </div>
+    <h3 class="date">© 1997-2023 Netflix, Inc.</h3>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
+<script>
+  var video = document.getElementById('video-ad');
+  var unmuteButton = document.getElementById('unmuteButton');
+
+  function toggleMute() {
+    if (video.muted) {
+      video.muted = false;
+      unmuteButton.innerHTML = 'Mute';
+    } else {
+      video.muted = true;
+      unmuteButton.innerHTML = 'Unmute';
+    }
+  }
+</script>
+</body>
